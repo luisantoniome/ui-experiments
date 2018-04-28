@@ -1,0 +1,220 @@
+:root {
+  --main-font: 'Tajawal', sans-serif;
+  --primary-color: #013243;
+  --white: #ECF0F1;
+  --gray: #DADFE1;
+  --dark-gray: #BDC3C7;
+  --yellow: #F5D76E;
+}
+
+html {
+  font-family: var(--main-font);
+}
+
+.wrapper {
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/* Sidebar */
+
+.sidebar {
+  position: relative;
+  display: grid;
+  align-items: center;
+  max-height: inherit;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.logo-art {
+  color: var(--dark-gray);
+}
+
+.logo-icon {
+  font-size: 4rem;
+}
+
+.title {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.title:after,
+.title:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--dark-gray);
+}
+
+.title:before {
+  right: 100%;
+}
+
+.title:after {
+  left: 100%;
+}
+
+.subtitle {
+  display: block;
+  margin-top: -.7rem;
+}
+
+.menu {
+  display: grid;
+}
+
+.menu-link {
+  display: block;
+  padding: .7rem 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.menu-link.active,
+.menu-link:hover {
+  color: var(--yellow);
+}
+
+/* Food Menu */
+
+.foodmenu {
+  background-color: var(--white);
+  padding: 1rem;
+  height: 100vh;
+  max-height: inherit;
+}
+
+.foodmenu-header {
+  padding: 1rem;
+}
+
+.categories-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+  color: var(--dark-gray);
+}
+
+.category.active {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.foods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.food {
+  cursor: pointer;
+}
+
+.food img {
+  display: block;
+}
+
+.pagination {
+  padding: .5rem 0;
+}
+
+.pagination-menu {
+  display: flex;
+  color: var(--primary-color);
+}
+
+.page-number {
+  position: relative;
+  margin: 0 .5rem;
+}
+
+.page-number:after {
+  content: '/';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin: 0 5px;
+}
+
+.page-number.active {
+  color: var(--dark-gray);
+}
+
+/* Food Detail */
+
+.food-detail {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 35vw;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: -10px 0 25px 1px var(--dark-gray);
+}
+
+.food-detail.active {
+  display: grid;
+}
+
+.food-image {
+  max-height: 300px;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+
+.rating {
+  color: var(--yellow);
+}
+
+.rating:last-child {
+  color: var(--gray);
+}
+
+.food-description {
+  color: var(--dark-gray);
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: .7rem 1.5rem;
+  font-family: var(--main-font);
+  color: var(--white);
+}
+
+.btn-contact {
+  background-color: var(--primary-color);
+}
+
+.btn-details {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--dark-gray);
+  cursor: pointer;
+}
